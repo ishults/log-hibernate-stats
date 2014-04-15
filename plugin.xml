@@ -1,0 +1,20 @@
+<plugin name='log-hibernate-stats' version='0.103' grailsVersion='2.0 &gt; *'>
+  <author>Igor Shults</author>
+  <authorEmail>igor.shults@gmail.com</authorEmail>
+  <title>Log Hibernate Stats Plugin</title>
+  <description>A Grails plugin to log Hibernate statistics across controller actions.
+</description>
+  <documentation>http://grails.org/plugin/log-hibernate-stats</documentation>
+  <type>LogHibernateStatsGrailsPlugin</type>
+  <resources>
+    <resource>controller.ControllerFilters</resource>
+  </resources>
+  <repositories>
+    <repository name='grailsCentral' url='http://grails.org/plugins' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+  </repositories>
+  <dependencies />
+  <plugins />
+  <runtimePluginRequirements />
+  <behavior />
+</plugin>
