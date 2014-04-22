@@ -2,7 +2,7 @@ package controller
 
 import org.hibernate.stat.Statistics
 
-class ControllerFilters {
+class LogHibernateStatsControllerFilters {
 
     private static final String START_TIME = 'Hibernate_Start_Time'
     private static final String ALWAYS = 'ALWAYS'

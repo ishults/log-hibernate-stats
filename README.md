@@ -11,7 +11,7 @@ logHibernateStats.enabled = 'ALWAYS'// From ALWAYS, ALLOWED, NEVER
 ```
 to the environments you want to track statistics for, then in your config set:
 ```
-info    'grails.app.filters.controller.ControllerFilters' // or debug
+info    'grails.app.filters.controller.LogHibernateStatsControllerFilters' // or debug
 ```
 You should now be seeing output like:
 ```
