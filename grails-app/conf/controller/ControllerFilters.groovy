@@ -14,7 +14,7 @@ class ControllerFilters {
     def filters = {
         logHibernateStats(controller: '*', action: '*') {
             before = {
-                String enabledString = grailsApplication.config.logHibernateStats.enabled
+                String enabledString = grailsApplication.config.logHibernateStats?.enabled
                 Statistics stats = sessionFactory.statistics
 
                 if (enabledString == ALWAYS || (enabledString == ALLOWED && params._logHibernateStats)) {
@@ -32,7 +32,7 @@ class ControllerFilters {
             }
 
             afterView = {
-                String enabledString = grailsApplication.config.logHibernateStats.enabled
+                String enabledString = grailsApplication.config.logHibernateStats?.enabled
 
                 if (enabledString == ALWAYS || (enabledString == ALLOWED && params._logHibernateStats)) {
                     Statistics stats = sessionFactory.statistics
