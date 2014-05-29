@@ -48,6 +48,8 @@ It is recommended to keep the plugin enabled value at 'NEVER' by default, and se
 ### Credits
 Plugin created by Igor Shults.
 
+Official Grails plugin page here: http://grails.org/plugin/log-hibernate-stats
+
 If you're not interested in running this as a plugin, I wrote a blog post on some standalone code here: http://www.objectpartners.com/2014/04/22/tracking-hibernate-statistics-across-grails-actions/
 
 Inspired by a post on Hibernate logging by Himanshu Seth: http://www.intelligrape.com/blog/2011/11/07/grails-find-number-of-queries-executed-for-a-particular-request/
