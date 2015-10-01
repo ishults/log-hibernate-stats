@@ -1,0 +1,74 @@
+buildscript {
+    ext {
+        grailsVersion = project.grailsVersion
+    }
+    repositories {
+        mavenLocal()
+        maven { url "https://repo.grails.org/grails/core" }
+    }
+    dependencies {
+        classpath "org.grails:grails-gradle-plugin:$grailsVersion"
+
+    }
+}
+
+plugins {
+    id "io.spring.dependency-management" version "0.5.2.RELEASE"
+    id "com.jfrog.bintray" version "1.2"
+}
+
+version "1.0.10"
+group "com.ishults"
+
+apply plugin: 'maven-publish'
+apply plugin: "org.grails.grails-plugin"
+// Used for publishing to central repository, remove if not needed
+apply from:'https://raw.githubusercontent.com/grails/grails-profile-repository/master/profiles/plugin/templates/grailsCentralPublishing.gradle'
+apply from:'https://raw.githubusercontent.com/grails/grails-profile-repository/master/profiles/plugin/templates/bintrayPublishing.gradle'
+
+ext {
+    grailsVersion = project.grailsVersion
+    gradleWrapperVersion = project.gradleWrapperVersion
+}
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "https://repo.grails.org/grails/core" }
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.grails:grails-bom:$grailsVersion"
+    }
+    applyMavenExclusions false
+}
+
+dependencies {
+    provided "org.grails.plugins:hibernate"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = gradleWrapperVersion
+}
+
+bintray {
+    pkg {
+        userOrg='ishults'
+        repo = 'plugins'
+        desc = "A simple plugin to log Hibernate statistics across controller actions."
+        licenses = ['Apache-2.0']
+        name = "${project.group}:${project.name}"
+        websiteUrl = "https://github.com/ishults/${project.name}/issues"
+        issueTrackerUrl = "https://github.com/ishults/${project.name}/issues"
+        vcsUrl = "https://github.com/ishults/${project.name}"
+        publicDownloadNumbers = true
+        version {
+            attributes = [ 'grails-plugin': "${project.group}:${project.name}" ]
+            name = project.version
+        }
+    }
+}

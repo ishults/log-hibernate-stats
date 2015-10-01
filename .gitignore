@@ -1,26 +1,28 @@
-# web application files
+Thumbs.db
+.DS_Store
+
+# GRAILS files
 /web-app/WEB-INF
-
-# IDE support files
-/.classpath
-/.project
-/.settings
-
-*.log
-
-# plugin release file
-/*.zip
-/*.zip.sha1
-/plugin.xml
-
-# "temporary" build files
 /target
+/target-eclipse
 
-### IntelliJ ###
-*.iml
+# GRADLE files
+build/
+.gradle/
+
+# IDE files
+.classpath
+.idea/
 *.ipr
 *.iws
-.idea/
+*.iml
+.project
+.settings
+/*.launch
+/*.tmproj
 
-cobertura.ser
-node_modules/
+*.log
+*.zip
+/out
+plugin.xml
+*.sha1
