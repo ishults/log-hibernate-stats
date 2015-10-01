@@ -21,8 +21,7 @@ class LogHibernateStatsInterceptor {
     boolean before() {
         String enabledString = grailsApplication.config.getProperty('logHibernateStats.enabled')
         Statistics stats = sessionFactory.statistics
-println enabledString
-params.test = 3
+        
         if (enabledString == ALWAYS || (enabledString == ALLOWED && params._logHibernateStats)) {
             log.info "\n### Start logging for action: ${controllerName}/${actionName} ###"
 
