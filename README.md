@@ -64,6 +64,7 @@ It is recommended to keep the plugin enabled value at 'NEVER' by default, and se
 Plugin created by Igor Shults.
 
 Official Grails 3.x plugin page here: https://bintray.com/ishults/plugins/com.ishults%3Alog-hibernate-stats/view
+
 Official Grails 2.x plugin page here: http://grails.org/plugin/log-hibernate-stats
 
 If you're not interested in running this as a plugin, I wrote a blog post on some standalone code here: http://www.objectpartners.com/2014/04/22/tracking-hibernate-statistics-across-grails-actions/
