@@ -20,6 +20,11 @@ class LogHibernateStatsInterceptor {
 
     boolean before() {
         String enabledString = grailsApplication.config.logHibernateStats?.enabled
+
+        if (enabledString == NEVER) {
+            return true
+        }
+
         Statistics stats = sessionFactory.statistics
         
         if (enabledString == ALWAYS || (enabledString == ALLOWED && params._logHibernateStats)) {
@@ -38,10 +43,12 @@ class LogHibernateStatsInterceptor {
         return true
     }
 
-    boolean after() { true }
-
     void afterView() {
         String enabledString = grailsApplication.config.logHibernateStats?.enabled
+
+        if (enabledString == NEVER) {
+            return
+        }
 
         if (enabledString == ALWAYS || (enabledString == ALLOWED && params._logHibernateStats)) {
             Statistics stats = sessionFactory.statistics
