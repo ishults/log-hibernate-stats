@@ -22,6 +22,7 @@ group "com.ishults"
 
 apply plugin: 'maven-publish'
 apply plugin: "org.grails.grails-plugin"
+
 // Used for publishing to central repository, remove if not needed
 apply from:'https://raw.githubusercontent.com/grails/grails-profile-repository/master/profiles/plugin/templates/grailsCentralPublishing.gradle'
 apply from:'https://raw.githubusercontent.com/grails/grails-profile-repository/master/profiles/plugin/templates/bintrayPublishing.gradle'
@@ -49,6 +50,10 @@ dependencyManagement {
 
 dependencies {
     provided "org.grails.plugins:hibernate"
+    provided "org.grails:grails-dependencies"
+    provided 'javax.servlet:javax.servlet-api:3.1.0'
+
+    testCompile "org.grails:grails-plugin-testing"
 }
 
 task wrapper(type: Wrapper) {

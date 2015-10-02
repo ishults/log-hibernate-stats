@@ -1,6 +1,8 @@
 package com.ishults.logHibernateStats
 
-class LogHibernateStatsGrailsPlugin {
+import grails.plugins.Plugin
+
+class LogHibernateStatsGrailsPlugin extends Plugin {
     def grailsVersion = "3.0.0 > *"
     def title = "Log Hibernate Stats Plugin"
     def description = 'Logs Hibernate statistics across controller actions'
