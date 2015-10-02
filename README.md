@@ -7,12 +7,23 @@ A simple Grails 3 plugin to log Hibernate statistics on controller actions.
 For the Grails 2 plugin code and documentation, see: https://github.com/ishults/log-hibernate-stats/tree/grails_2.x
 
 ### Configuration and Usage
-Just add
+To add this plugin, in your `build.gradle` add the repository:
+
+    maven { url "http://dl.bintray.com/ishults/plugins" }
+
+and add the dependency:
+
+    compile "com.ishults:log-hibernate-stats:1.0.17"
+
+
+Then just update your config (such as `application.yml`) to add
 ```
 logHibernateStats:
     enabled: 'ALWAYS'// From ALWAYS, ALLOWED, NEVER
 ```
-to your `application.yml` for the environments you want to track statistics for, then in your `logback.groovy` set:
+for the environments you want to track statistics for. 
+
+Then in your `logback.groovy` set:
 ```
 logger 'grails.app.controllers.com.ishults.logHibernateStats.LogHibernateStatsInterceptor',
     DEBUG, ['STDOUT'], false // Or INFO
@@ -52,7 +63,8 @@ It is recommended to keep the plugin enabled value at 'NEVER' by default, and se
 ### Credits
 Plugin created by Igor Shults.
 
-Official Grails plugin page here: http://grails.org/plugin/log-hibernate-stats
+Official Grails 3.x plugin page here: https://bintray.com/ishults/plugins/com.ishults%3Alog-hibernate-stats/view
+Official Grails 2.x plugin page here: http://grails.org/plugin/log-hibernate-stats
 
 If you're not interested in running this as a plugin, I wrote a blog post on some standalone code here: http://www.objectpartners.com/2014/04/22/tracking-hibernate-statistics-across-grails-actions/
 
