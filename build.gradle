@@ -17,7 +17,7 @@ plugins {
     id "com.jfrog.bintray" version "1.2"
 }
 
-version "1.0.16"
+version "1.0.17"
 group "com.ishults"
 
 apply plugin: 'maven-publish'
@@ -67,7 +67,7 @@ bintray {
         desc = "A simple plugin to log Hibernate statistics across controller actions."
         licenses = ['Apache-2.0']
         name = "${project.group}:${project.name}"
-        websiteUrl = "https://github.com/ishults/${project.name}/issues"
+        websiteUrl = "https://github.com/ishults/${project.name}"
         issueTrackerUrl = "https://github.com/ishults/${project.name}/issues"
         vcsUrl = "https://github.com/ishults/${project.name}"
         publicDownloadNumbers = true
