@@ -15,7 +15,7 @@ repositories {
 }
 dependencies {
   ...
-  compile "com.ishults:log-hibernate-stats:1.0.17"
+  compile "com.ishults:log-hibernate-stats:1.0.18"
 }
 ```
 
