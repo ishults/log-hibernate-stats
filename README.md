@@ -15,7 +15,7 @@ repositories {
 }
 dependencies {
   ...
-  compile "com.ishults:log-hibernate-stats:1.0.18"
+  compile "org.grails.plugins:log-hibernate-stats:1.0.18"
 }
 ```
 
@@ -66,7 +66,7 @@ It is recommended to keep the plugin enabled value at 'NEVER' by default, and se
 ### Credits
 Plugin created by Igor Shults.
 
-Official Grails 3.x plugin page here: https://bintray.com/ishults/plugins/com.ishults%3Alog-hibernate-stats/view
+Official Grails 3.x plugin page here: https://bintray.com/ishults/plugins/org.grails.plugins%3Alog-hibernate-stats/view
 
 Official Grails 2.x plugin page here: http://grails.org/plugin/log-hibernate-stats
 
