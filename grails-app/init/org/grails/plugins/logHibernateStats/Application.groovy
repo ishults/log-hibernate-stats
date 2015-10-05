@@ -1,4 +1,4 @@
-package com.ishults.logHibernateStats
+package org.grails.plugins.logHibernateStats
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration

@@ -3,7 +3,7 @@
 grails:
     profile: web-plugin
     codegen:
-        defaultPackage: com.ishults.logHibernateStats
+        defaultPackage: org.grails.plugins.logHibernateStats
 info:
     app:
         name: '@info.app.name@'

@@ -15,7 +15,7 @@ repositories {
 }
 dependencies {
   ...
-  compile "org.grails.plugins:log-hibernate-stats:1.0.18"
+  compile "org.grails.plugins:log-hibernate-stats:1.0.19"
 }
 ```
 
@@ -28,7 +28,7 @@ for the environments you want to track statistics for.
 
 Then in your `logback.groovy` set:
 ```
-logger 'grails.app.controllers.com.ishults.logHibernateStats.LogHibernateStatsInterceptor',
+logger 'grails.app.controllers.org.grails.plugins.logHibernateStats.LogHibernateStatsInterceptor',
     DEBUG, ['STDOUT'], false // Or INFO
 ```
 You should now be seeing output like:
