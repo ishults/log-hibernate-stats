@@ -1,4 +1,4 @@
-package org.grails.plugins.logHibernateStats
+package org.grails.plugins
 
 import grails.core.GrailsApplication
 import org.hibernate.stat.Statistics
